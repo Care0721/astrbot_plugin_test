@@ -1,0 +1,8 @@
+{
+  "reply_template": {
+    "type": "string",
+    "title": "Bot 在线测试回复模板",
+    "description": "支持 {time} 占位符（会自动替换成当前时间）。可随意修改文字，保持严肃正式语气。",
+    "default": "Bot 在线状态确认\n当前时间：{time}\nBot 运行正常，未检测到掉线。\n如需进一步测试或确认状态，请随时发送指令。"
+  }
+}
