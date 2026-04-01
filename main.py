@@ -1,7 +1,7 @@
 from astrbot.api.event import filter, AstrMessageEvent
 from astrbot.api.star import Star, register
 from astrbot.api import logger, AstrBotConfig
-from astrbot.api.star import Context    Context
+from astrbot.api.star import Context   # ← 必须单独导入 Context
 import time
 
 @register("bot_online_test", "Care", "在线测试：发送“测试”证明Bot在线", "1.0.5")
@@ -10,7 +10,7 @@ class BotOnlineTestPlugin(Star):
         super().__init__(context)
         self.config = config
         
-        # 从网页配置读取回
+        # 从网页配置读取回复模板
         self.reply_template = self.config.get(
             "reply_template",
             "Bot 在线状态确认\n当前时间：{time}\nBot 运行正常，未检测到掉线。\n如需进一步测试或确认状态，请随时发送指令。"
